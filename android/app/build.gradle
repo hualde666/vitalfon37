@@ -1,0 +1,121 @@
+plugins {
+    id "com.android.application"
+    id "kotlin-android"
+    // The Flutter Gradle Plugin must be applied after the Android and Kotlin Gradle plugins.
+    id "dev.flutter.flutter-gradle-plugin"
+}
+def localProperties = new Properties()
+def localPropertiesFile = rootProject.file('local.properties')
+
+if (localPropertiesFile.exists()) {
+    localPropertiesFile.withReader('UTF-8') { reader ->
+        localProperties.load(reader)
+    }
+}
+// 13 03 2024
+// def flutterRoot = localProperties.getProperty('flutter.sdk')
+// if (flutterRoot == null) {
+//     throw GradleException("Flutter SDK not found. Define location with flutter.sdk in the local.properties file.")
+// }
+
+def flutterVersionCode = localProperties.getProperty('flutter.versionCode')
+if (flutterVersionCode == null) {
+    // flutterVersionCode = '1'
+    flutterVersionCode = '1'
+}
+
+def flutterVersionName = localProperties.getProperty('flutter.versionName')
+if (flutterVersionName == null) {
+    //flutterVersionName = '1.0'
+     flutterVersionName = '1.0'
+}
+// 13 03 2024
+//apply plugin: 'com.android.application'
+//apply plugin: 'kotlin-android'
+//apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
+
+
+
+
+def keystoreProperties = new Properties()
+//********************************************** para Piedad/
+def keystorePropertiesFile = rootProject.file('key.properties')
+if (keystorePropertiesFile.exists()) {
+    keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+}
+//**********************************************/
+// plugins {
+//     id("com.android.application")
+// }
+android {
+   compileSdkVersion = 33
+   namespace "com.piproy.vitalfon"
+   compileSdk flutter.compileSdkVersion
+   ndkVersion flutter.ndkVersion
+
+    // sourceSets {
+    //     main.java.srcDirs += 'src/main/kotlin'
+    // }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    //   sourceCompatibility 1.8
+    //   targetCompatibility 1.8
+    }
+    // kotlinOptions {
+    //     jvmTarget = '1.8'
+    // }
+    // sourceSets {
+    //     main.java.srcDirs += 'src/main/kotlin'
+    // }
+    defaultConfig {
+     
+        applicationId = "com.piproy.vitalfon"
+       // 4 01 2022 minSdkVersion 21
+       // 4 01 2022 targetSdkVersion 30
+        minSdkVersion 21
+        targetSdkVersion 33
+        //
+        //***  OJO vitaltest  version 23 en google play
+        //
+        versionCode = 37
+        
+        versionName = "1.0.0"
+   // android.defaultConfig.ndk.debugSymbolLevel = 'SYMBOL_TABLE'
+
+        
+    }
+    //********************************************** comentar para Piedad/
+signingConfigs {
+    release {
+        keyAlias keystoreProperties['keyAlias']
+        keyPassword keystoreProperties['keyPassword']
+        storeFile file(keystoreProperties['storeFile'])
+        storePassword keystoreProperties['storePassword']
+    }
+}
+buildTypes {
+        debug {
+            signingConfig signingConfigs.debug
+        }
+    release {
+
+       signingConfig signingConfigs.release
+    }
+}
+
+}
+
+flutter {
+    source '../..'
+}
+
+dependencies {
+    
+
+   implementation 'com.google.android.gms:play-services-location:21.0.1'
+ 
+
+
+}
+
