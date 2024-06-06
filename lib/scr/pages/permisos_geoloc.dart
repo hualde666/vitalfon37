@@ -20,7 +20,7 @@ class _GeoPermisosState extends State<GeoPermisos> {
             body: Center(
               child: SingleChildScrollView(
                 child: Container(
-                  margin: EdgeInsets.symmetric(horizontal: 10),
+                  margin: EdgeInsets.symmetric(horizontal: 30),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -35,7 +35,7 @@ class _GeoPermisosState extends State<GeoPermisos> {
                           ),
                           Text(
                             ' Para poder enviar la ubicación del usuario, en caso de emergencia, vitalfon necesita acceso a su localización. Vitalfon solo la usará al tocar el botón de emergencia.',
-                            textAlign: TextAlign.center,
+                            textAlign: TextAlign.justify,
                             style: TextStyle(
                                 fontStyle: FontStyle.italic,
                                 fontSize: 25,

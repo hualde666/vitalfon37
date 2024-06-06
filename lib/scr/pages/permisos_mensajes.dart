@@ -22,7 +22,7 @@ class _MensajesPermisosState extends State<MensajesPermisos> {
       body: Center(
         child: SingleChildScrollView(
           child: Container(
-            margin: EdgeInsets.symmetric(horizontal: 10),
+            margin: EdgeInsets.symmetric(horizontal: 30),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -37,7 +37,7 @@ class _MensajesPermisosState extends State<MensajesPermisos> {
                     ),
                     Text(
                       'Para que el usuario pueda enviar el mensaje SOS en caso de emergencia, vitalfon necesita autorización para enviar mensaje de texto (SMS).',
-                      textAlign: TextAlign.center,
+                      textAlign: TextAlign.justify,
                       style: TextStyle(
                           fontStyle: FontStyle.italic,
                           fontSize: 25,

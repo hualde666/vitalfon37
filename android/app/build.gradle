@@ -78,7 +78,7 @@ android {
         //
         //***  OJO vitaltest  version 23 en google play
         //
-        versionCode = 37
+        versionCode = 38
         
         versionName = "1.0.0"
    // android.defaultConfig.ndk.debugSymbolLevel = 'SYMBOL_TABLE'

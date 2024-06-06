@@ -12,10 +12,10 @@ class BienvenidaPage extends StatelessWidget {
       backgroundColor: Colors.white,
       body: Center(
           child: Container(
-        margin: EdgeInsets.symmetric(horizontal: 10),
+        margin: EdgeInsets.symmetric(horizontal: 30),
         child: SingleChildScrollView(
           child: Column(
-            //mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               SizedBox(
                 height: 10,

@@ -19,7 +19,7 @@ class _InstalacionPageState extends State<InstalacionPage> {
       body: Center(
           child: SingleChildScrollView(
         child: Container(
-          margin: EdgeInsets.symmetric(horizontal: 10),
+          margin: EdgeInsets.symmetric(horizontal: 30),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -34,7 +34,7 @@ class _InstalacionPageState extends State<InstalacionPage> {
                   ),
                   Text(
                     'Para definir los contactos que recibirán el mensaje de emergencia y facilitar el acceso a los contactos mas importantes para el usuario, vitalfon necesita acceder a tus contactos.',
-                    textAlign: TextAlign.center,
+                    textAlign: TextAlign.justify,
                     style: TextStyle(
                         fontStyle: FontStyle.italic,
                         fontSize: 25,

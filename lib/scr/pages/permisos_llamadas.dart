@@ -24,7 +24,7 @@ class _LLamadasPermisosState extends State<LLamadasPermisos> {
             body: Center(
               child: SingleChildScrollView(
                 child: Container(
-                  margin: EdgeInsets.symmetric(horizontal: 10),
+                  margin: EdgeInsets.symmetric(horizontal: 30),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -39,7 +39,7 @@ class _LLamadasPermisosState extends State<LLamadasPermisos> {
                           ),
                           Text(
                             ' Para facilitar las llamadas directas , vitalfon necesita que autorices  a realizar las llamadas que solicite el usuario.		',
-                            textAlign: TextAlign.center,
+                            textAlign: TextAlign.justify,
                             style: TextStyle(
                                 fontStyle: FontStyle.italic,
                                 fontSize: 25,
