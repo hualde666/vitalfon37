@@ -112,21 +112,5 @@ class _GeoPermisosState extends State<GeoPermisos> {
                 ),
               ),
             )));
-    // floatingActionButtonLocation:
-    //     FloatingActionButtonLocation.centerDocked,
-    // floatingActionButton: FloatingActionButton.extended(
-    //     heroTag: "siguiente",
-    //     label: Text(
-    //       'siguiente',
-    //     ),
-    //     onPressed: () async {
-    //       AndroidChannel _androidChannel = AndroidChannel();
-    //       await _androidChannel.permisoGeo();
-
-    //       Navigator.pushReplacement(
-    //           context,
-    //           MaterialPageRoute(
-    //               builder: (context) => LLamadasPermisos()));
-    //     })));
   }
 }
