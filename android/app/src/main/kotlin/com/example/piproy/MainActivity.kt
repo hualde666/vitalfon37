@@ -4,8 +4,8 @@ import androidx.annotation.NonNull
 import io.flutter.embedding.android.FlutterActivity
 import io.flutter.embedding.engine.FlutterEngine
 import io.flutter.plugin.common.MethodChannel
-import io.flutter.plugin.common.BinaryMessenger
-import io.flutter.plugins.GeneratedPluginRegistrant
+//import io.flutter.plugin.common.BinaryMessenger
+//import io.flutter.plugins.GeneratedPluginRegistrant
 
 
 
@@ -18,11 +18,11 @@ import android.content.IntentFilter
 import android.os.BatteryManager
 import android.os.Build.VERSION
 import android.os.Build.VERSION_CODES
-import android.os.Bundle
+//import android.os.Bundle
 //import android.telephony.SmsManager
-import android.Manifest
+//import android.Manifest
 //import android.content.pm.PermissionGroupInfo
-import android.content.pm.PackageManager
+//import android.content.pm.PackageManager
 import android.net.ConnectivityManager
 import android.net.ConnectivityManager.NetworkCallback
 import android.net.NetworkCapabilities
@@ -33,10 +33,10 @@ import android.hardware.camera2.CameraManager
 //import android.net.Uri
 import    android.telephony.TelephonyManager
 //import    android.telephony.SmsManager.FinancialSmsCallback
-import android.app.Activity
-import com.google.android.gms.location.*
-import androidx.core.content.ContextCompat
-import androidx.core.app.ActivityCompat
+//import android.app.Activity
+//import com.google.android.gms.location.*
+//import androidx.core.content.ContextCompat
+//import androidx.core.app.ActivityCompat
 
 class MainActivity : FlutterActivity() {
     private val CHANNEL = "app.piproy.channel/hualdemirene@gmail.com"
@@ -93,18 +93,18 @@ class MainActivity : FlutterActivity() {
             "permisos" -> {
                 return verificarPermisos()
             }
-            "permisocall" -> {
-                return permisoCall()
-            }
-            "permisogeo" -> {
-                return permisoGeo()
-            }
-            "permisosms" -> {
-                return permisoSms()
-            }
-            "tengopermisosms" -> {
-                return tengoPermisoSms()
-            }
+            // "permisocall" -> {
+            //     return permisoCall()
+            // }
+            // "permisogeo" -> {
+            //     return permisoGeo()
+            // }
+            // "permisosms" -> {
+            //     return permisoSms()
+            // }
+            // "tengopermisosms" -> {
+            //     return tengoPermisoSms()
+            // }
             //   "version" -> {return verificarPermisos()}
             "wifion" -> {
                 return getWifiOn()
@@ -116,9 +116,9 @@ class MainActivity : FlutterActivity() {
 //                "linterna" -> {
 //                    return prendeLinterna(prender)
 //                }
-            "gps" -> {
-                return getGps()
-            }
+            // "gps" -> {
+            //     return getGps()
+            // }
             "datos" -> {
                 return getDatos()
             }
@@ -292,49 +292,49 @@ class MainActivity : FlutterActivity() {
     }
 
 
-    private fun permisoCall(): Boolean {
+    // private fun permisoCall(): Boolean {
 
-        ActivityCompat.requestPermissions(
-            this, arrayOf(Manifest.permission.CALL_PHONE),
-            101
-        )
-        return true
-
-
-    }
-
-    private fun tengoPermisoSms(): Boolean {
-        var permiso = ContextCompat.checkSelfPermission(
-            this,
-            Manifest.permission.SEND_SMS
-        );
-        println("******************");
-        if (permiso != PackageManager.PERMISSION_GRANTED) {
-
-                println("error NO HAY PERMISOS");
-                return false;
-            }
-            println("con permisos   de una");
-            return true;
+    //     ActivityCompat.requestPermissions(
+    //         this, arrayOf(Manifest.permission.CALL_PHONE),
+    //         101
+    //     )
+    //     return true
 
 
-    }
+    // }
 
-    private fun permisoSms(): Boolean {
-        var permiso: Boolean;
-        if (ActivityCompat.shouldShowRequestPermissionRationale(this,
-        Manifest.permission.SEND_SMS)){
-                permiso = false;
-        }else{
-            ActivityCompat.requestPermissions(this@MainActivity,  arrayOf(Manifest.permission.SEND_SMS),200 );
-             permiso = tengoPermisoSms();
+    // private fun tengoPermisoSms(): Boolean {
+    //     var permiso = ContextCompat.checkSelfPermission(
+    //         this,
+    //         Manifest.permission.SEND_SMS
+    //     );
+    //     println("******************");
+    //     if (permiso != PackageManager.PERMISSION_GRANTED) {
 
-        }
+    //             println("error NO HAY PERMISOS");
+    //             return false;
+    //         }
+    //         println("con permisos   de una");
+    //         return true;
+
+
+    // }
+
+    // private fun permisoSms(): Boolean {
+    //     var permiso: Boolean;
+    //     if (ActivityCompat.shouldShowRequestPermissionRationale(this,
+    //     Manifest.permission.SEND_SMS)){
+    //             permiso = false;
+    //     }else{
+    //         ActivityCompat.requestPermissions(this@MainActivity,  arrayOf(Manifest.permission.SEND_SMS),200 );
+    //          permiso = tengoPermisoSms();
+
+    //     }
         
          
 
-        return permiso;
-    }
+    //     return permiso;
+    // }
 
 
 
@@ -343,14 +343,14 @@ class MainActivity : FlutterActivity() {
 
 
 
-    private fun permisoGeo(): Boolean {
+    // private fun permisoGeo(): Boolean {
 
-        ActivityCompat.requestPermissions(
-            this, arrayOf(Manifest.permission.ACCESS_COARSE_LOCATION),
-            101
-        )
-        return true
+    //     ActivityCompat.requestPermissions(
+    //         this, arrayOf(Manifest.permission.ACCESS_COARSE_LOCATION),
+    //         101
+    //     )
+    //     return true
 
 
-    }
+    // }
 }

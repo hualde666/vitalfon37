@@ -47,33 +47,33 @@ class AyudaNuevaPage extends StatelessWidget {
             height: 10,
             color: Colors.black54,
           ),
-          ItemConfig(
-            icon: Icons.message,
-            texto: 'Redactar mensaje de emergencia',
-            onPress: Ayuda(pagina: 'Mensaje de emergencia'),
-          ),
-          Divider(
-            height: 10,
-            color: Colors.black54,
-          ),
-          ItemConfig(
-            icon: Icons.contact_phone,
-            texto: 'Establecer destinatarios del mensaje de emergencia',
-            onPress: Ayuda(pagina: 'Contactos SMS de SOS'),
-          ),
-          Divider(
-            height: 10,
-            color: Colors.black54,
-          ),
-          ItemConfig(
-            icon: Icons.phone_forwarded,
-            texto: 'Establecer destinatario de la llamada de emergencia',
-            onPress: (Ayuda(pagina: 'Llamada de emergencia')),
-          ),
-          Divider(
-            height: 10,
-            color: Colors.black54,
-          ),
+          // ItemConfig(
+          //   icon: Icons.message,
+          //   texto: 'Redactar mensaje de emergencia',
+          //   onPress: Ayuda(pagina: 'Mensaje de emergencia'),
+          // ),
+          // Divider(
+          //   height: 10,
+          //   color: Colors.black54,
+          // ),
+          // ItemConfig(
+          //   icon: Icons.contact_phone,
+          //   texto: 'Establecer destinatarios del mensaje de emergencia',
+          //   onPress: Ayuda(pagina: 'Contactos SMS de SOS'),
+          // ),
+          // Divider(
+          //   height: 10,
+          //   color: Colors.black54,
+          // ),
+          // ItemConfig(
+          //   icon: Icons.phone_forwarded,
+          //   texto: 'Establecer destinatario de la llamada de emergencia',
+          //   onPress: (Ayuda(pagina: 'Llamada de emergencia')),
+          // ),
+          // Divider(
+          //   height: 10,
+          //   color: Colors.black54,
+          // ),
           ItemConfig(
             icon: Icons.groups,
             texto: 'Establecer contactos en la pantalla principal',

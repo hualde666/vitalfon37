@@ -2,10 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:piproy/scr/ayuda_widget/ayuda_des_habilitar.dart';
 
 import 'package:piproy/scr/ayuda_widget/ayuda_introduccion.dart';
-import 'package:piproy/scr/ayuda_widget/ayuda_llamada_sos.dart';
 
 import 'package:piproy/scr/widgets/boton_ayuda_dibujo.dart';
-import 'package:piproy/scr/widgets/boton_rojo.dart';
+// import 'package:piproy/scr/widgets/boton_rojo.dart';
 import 'package:piproy/scr/widgets/boton_verde.dart';
 import 'package:piproy/scr/widgets/header_app.dart';
 
@@ -16,13 +15,12 @@ import '../ayuda_widget/ayuda_apis_grupos.dart';
 import '../ayuda_widget/ayuda_configurar.dart';
 
 import '../ayuda_widget/ayuda_contacs_grupos.dart';
-import '../ayuda_widget/ayuda_contacs_sms.dart';
+
 import '../ayuda_widget/ayuda_contactanos.dart';
 
 import '../ayuda_widget/ayuda_des_bloquear.dart';
 import '../ayuda_widget/ayuda_inicialzar.dart';
 import '../ayuda_widget/ayuda_linkweb.dart';
-import '../ayuda_widget/ayuda_mensaje_emergencia.dart';
 
 import '../ayuda_widget/ayuda_paleta.dart';
 import '../ayuda_widget/ayuda_salir.dart';
@@ -65,15 +63,15 @@ class Ayuda extends StatelessWidget {
       case 'Configuración':
         ayuda = AyudaConfigurarPage();
         break;
-      case 'Mensaje de emergencia':
-        ayuda = AyudaMensajeEmergenciaPage();
-        break;
-      case 'Contactos SMS de SOS':
-        ayuda = AyudaContactosSms();
-        break;
-      case 'Llamada de emergencia':
-        ayuda = AyudaLlamadaSosPage();
-        break;
+      // case 'Mensaje de emergencia':
+      //   ayuda = AyudaMensajeEmergenciaPage();
+      //   break;
+      // case 'Contactos SMS de SOS':
+      //   ayuda = AyudaContactosSms();
+      //   break;
+      // case 'Llamada de emergencia':
+      //   ayuda = AyudaLlamadaSosPage();
+      //   break;
       case 'Contactos':
         ayuda = AyudaContacsGrupos();
         break;
@@ -141,7 +139,7 @@ Widget tresBotonesHeader(BuildContext context, String pagina) {
           SizedBox(
             height: 10,
           ),
-          botonRojoHeader(context, true)
+          //botonRojoHeader(context, true)
         ]),
         //
         // Reloj(),

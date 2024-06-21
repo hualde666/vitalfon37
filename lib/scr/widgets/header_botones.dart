@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:piproy/scr/providers/estado_celular.dart';
 import 'package:piproy/scr/providers/provider_pref.dart';
-import 'package:piproy/scr/widgets/boton_rojo.dart';
+//import 'package:piproy/scr/widgets/boton_rojo.dart';
 import 'package:piproy/scr/widgets/configurar.dart';
 import 'package:piproy/scr/widgets/encabezado_icon.dart';
 import 'package:piproy/scr/widgets/fecha.dart';
@@ -144,7 +144,9 @@ class BotonesEncabezado extends StatelessWidget {
                   SizedBox(
                     height: 15,
                   ),
-                  botonRojoHeader(context, true),
+                  // botonRojoHeader(context, true),
+                  // sin boton rojo NUEVA VERSION
+                  // botonRojoHeader(context, false),
                 ],
               ),
             )

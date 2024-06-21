@@ -34,6 +34,7 @@ class ApiPorGrupoPage extends StatelessWidget {
       //  backgroundColor: Theme.of(context).primaryColor,
       //****** editar nombre del grupo */
       appBar: headerApp(context, '$grupo', Text(''), 0.0, true, 'ApiPorGrupos'),
+
       body: FutureBuilder(
           future: cargarListaGrupo(),
           builder: (BuildContext context, AsyncSnapshot snapshot) {

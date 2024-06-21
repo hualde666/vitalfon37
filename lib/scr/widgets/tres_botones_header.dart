@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:piproy/scr/widgets/boton_amarillo.dart';
 
 import 'package:piproy/scr/widgets/boton_verde.dart';
-import 'package:piproy/scr/widgets/boton_rojo.dart';
+// import 'package:piproy/scr/widgets/boton_rojo.dart';
 
 Widget tresBotonesHeader(
   BuildContext context,
@@ -16,7 +16,9 @@ Widget tresBotonesHeader(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
         botonHomeHeader(context, pagina),
-        rojo ? botonRojoHeader(context, rojo) : Container(),
+        Container(
+          width: 100,
+        ),
         botonBackHeader(context, pagina)
       ], // Ho
     ),

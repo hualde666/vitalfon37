@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:permission_handler/permission_handler.dart';
+import 'package:piproy/scr/pages/configuracion_page.dart';
+import 'package:piproy/scr/providers/aplicaciones_provider.dart';
+import 'package:piproy/scr/sharedpreferences/usuario_pref.dart';
 
-import 'package:piproy/scr/pages/permisos_mensajes.dart';
 import 'package:piproy/scr/widgets/logo_header.dart';
+import 'package:provider/provider.dart';
 
 class InstalacionPage extends StatefulWidget {
   @override
@@ -32,8 +35,18 @@ class _InstalacionPageState extends State<InstalacionPage> {
                   SizedBox(
                     height: 10,
                   ),
+                  // Text(
+                  //   'Para definir los contactos que recibirán el mensaje de emergencia y facilitar el acceso a los contactos mas importantes para el usuario, vitalfon necesita acceder a tus contactos.',
+                  //   textAlign: TextAlign.justify,
+                  //   style: TextStyle(
+                  //       fontStyle: FontStyle.italic,
+                  //       fontSize: 25,
+                  //       fontWeight: FontWeight.bold,
+                  //       color: Color.fromARGB(255, 155, 185, 182)),
+                  // ),
+
                   Text(
-                    'Para definir los contactos que recibirán el mensaje de emergencia y facilitar el acceso a los contactos mas importantes para el usuario, vitalfon necesita acceder a tus contactos.',
+                    'Para facilitar el acceso a los contactos mas importantes para el usuario, vitalfon necesita acceder a tus contactos.',
                     textAlign: TextAlign.justify,
                     style: TextStyle(
                         fontStyle: FontStyle.italic,
@@ -80,12 +93,24 @@ class _InstalacionPageState extends State<InstalacionPage> {
                   ? Container(
                       width: 170,
                       child: ElevatedButton(
-                          onPressed: () {
+                          onPressed: () async {
+                            // Navigator.pushReplacement(
+                            //     context,
+                            //     MaterialPageRoute(
+                            //         builder: (context) => MensajesPermisos()));
+                            // sin BOTON ROJO
+                            SharedPref().instalado = true;
+
+                            final apiMenu = Provider.of<AplicacionesProvider>(
+                                context,
+                                listen: false);
+                            await apiMenu.cargarCategorias();
                             Navigator.pushReplacement(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => MensajesPermisos()));
-
+                                    builder: (context) => ConfiguracionPage()
+                                    // PolitcasPrivacidad()
+                                    ));
                             // Navigator.pop(context);
                           },
                           style: ElevatedButton.styleFrom(

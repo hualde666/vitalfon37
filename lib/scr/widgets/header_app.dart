@@ -17,7 +17,9 @@ PreferredSize headerApp(BuildContext context, String titulo, Widget otroWidget,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          tresBotonesHeader(context, conrojo, pagina),
+          //  tresBotonesHeader(context, conrojo, pagina),
+          // sin boton rojo
+          tresBotonesHeader(context, false, pagina),
           SizedBox(
             height: 5,
           ),
